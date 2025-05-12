@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coffee Corner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font if loaded */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple animation for buttons on hover */
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-amber-800">The Coffee Corner</h1>
+                <div>
+                    <a href="#" class="text-gray-600 hover:text-amber-700 mx-2">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-amber-700 mx-2">Shop</a>
+                    <a href="#" class="text-gray-600 hover:text-amber-700 mx-2">Cart (0)</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-semibold text-center text-amber-900 mb-10">Our Coffee Selection</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <img src="https://placehold.co/600x400/d2b48c/4a2c1a?text=Arabica+Roast"
+                     alt="Arabica Roast Coffee"
+                     class="w-full h-48 object-cover"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-amber-800 mb-2">Arabica Roast</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Smooth and aromatic, our classic Arabica blend offers a balanced flavor profile.</p>
+                    <div class="mb-4">
+                        <label for="size-arabica" class="block text-sm font-medium text-gray-700 mb-1">Select Size:</label>
+                        <select id="size-arabica" name="size-arabica" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm rounded-md">
+                            <option value="small">Small (250g) - $10.00</option>
+                            <option value="medium">Medium (500g) - $18.00</option>
+                            <option value="large">Large (1kg) - $32.00</option>
+                        </select>
+                    </div>
+                    <button class="mt-auto w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-lg shadow">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <img src="https://placehold.co/600x400/8b4513/ffffff?text=Robusta+Bold"
+                     alt="Robusta Bold Coffee"
+                     class="w-full h-48 object-cover"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-amber-800 mb-2">Robusta Bold</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">A strong and full-bodied coffee with higher caffeine content for an extra kick.</p>
+                    <div class="mb-4">
+                        <label for="size-robusta" class="block text-sm font-medium text-gray-700 mb-1">Select Size:</label>
+                        <select id="size-robusta" name="size-robusta" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm rounded-md">
+                             <option value="small">Small (250g) - $9.00</option>
+                            <option value="medium">Medium (500g) - $16.00</option>
+                            <option value="large">Large (1kg) - $29.00</option>
+                        </select>
+                    </div>
+                    <button class="mt-auto w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-lg shadow">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <img src="https://placehold.co/600x400/654321/f5f5dc?text=Signature+Blend"
+                     alt="Signature Blend Coffee"
+                     class="w-full h-48 object-cover"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-amber-800 mb-2">Signature Blend</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Our expertly crafted house blend, featuring notes of chocolate and nuts.</p>
+                    <div class="mb-4">
+                        <label for="size-blend" class="block text-sm font-medium text-gray-700 mb-1">Select Size:</label>
+                        <select id="size-blend" name="size-blend" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm rounded-md">
+                             <option value="small">Small (250g) - $12.00</option>
+                            <option value="medium">Medium (500g) - $22.00</option>
+                            <option value="large">Large (1kg) - $40.00</option>
+                        </select>
+                    </div>
+                    <button class="mt-auto w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-lg shadow">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div> </main>
+
+    <footer class="bg-gray-800 text-white mt-12 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 The Coffee Corner. All rights reserved.</p>
+            </div>
+    </footer>
+
+    <script>
+        // Example: You could add JavaScript here to handle adding items to a cart,
+        // updating the cart count in the header, etc.
+        console.log("Coffee Shop Page Loaded!");
+
+        // Add simple interactivity to buttons (optional visual feedback)
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('mousedown', () => button.classList.add('scale-95'));
+            button.addEventListener('mouseup', () => button.classList.remove('scale-95'));
+            button.addEventListener('mouseleave', () => button.classList.remove('scale-95')); // Reset if mouse leaves while pressed
+        });
+    </script>
+
+</body>
+</html>
